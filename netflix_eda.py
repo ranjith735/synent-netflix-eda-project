@@ -1,6 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
+
+# =========================
+# CREATE IMAGES FOLDER
+# =========================
+os.makedirs("images", exist_ok=True)
 
 # =========================
 # LOAD DATASET
@@ -61,6 +67,8 @@ plt.title("Movies vs TV Shows")
 plt.xlabel("Type")
 plt.ylabel("Count")
 
+plt.savefig("images/movies_vs_tvshows.png")
+
 plt.show()
 
 # =========================
@@ -79,6 +87,8 @@ plt.ylabel("Count")
 
 plt.xticks(rotation=45)
 
+plt.savefig("images/top_countries.png")
+
 plt.show()
 
 # =========================
@@ -94,6 +104,8 @@ sns.countplot(
 )
 
 plt.title("Ratings Distribution")
+
+plt.savefig("images/ratings_distribution.png")
 
 plt.show()
 
@@ -115,6 +127,8 @@ plt.xticks(rotation=90)
 
 plt.title("Content Added Over Years")
 
+plt.savefig("images/content_added_over_years.png")
+
 plt.show()
 
 # =========================
@@ -134,8 +148,22 @@ genres.value_counts().head(10).plot(
 
 plt.title("Top 10 Genres")
 
+plt.xlabel("Genre")
+plt.ylabel("Count")
+
 plt.xticks(rotation=45)
 
-plt.savefig("movies_vs_tvshows.png")
+plt.savefig("images/top_genres.png")
+
 plt.show()
+
+# =========================
+# INSIGHTS
+# =========================
+print("\nMovies vs TV Shows Count:")
+print(df["type"].value_counts())
+
+print("\nTop 10 Genres:")
+print(genres.value_counts().head(10))
+
 print("\nEDA Completed Successfully!")

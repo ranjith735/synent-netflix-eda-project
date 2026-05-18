@@ -25,6 +25,12 @@ This project performs Exploratory Data Analysis (EDA) on the Netflix dataset usi
 * USA has the highest number of Netflix titles
 * Drama is one of the most common genres
 * Content additions increased rapidly after 2015
+* Movies dominate Netflix content compared to TV Shows.
+* United States contributes the highest number of titles.
+* Drama and International genres are highly popular.
+* Netflix content growth increased rapidly after 2015.
+* TV-MA is one of the most common content ratings.
+
 
 ## Files
 
