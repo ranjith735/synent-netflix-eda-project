@@ -136,6 +136,6 @@ plt.title("Top 10 Genres")
 
 plt.xticks(rotation=45)
 
+plt.savefig("movies_vs_tvshows.png")
 plt.show()
-
 print("\nEDA Completed Successfully!")
