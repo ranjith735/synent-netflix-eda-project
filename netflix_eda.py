@@ -58,16 +58,18 @@ print(df.describe(include="all"))
 # =========================
 plt.figure(figsize=(6, 4))
 
-sns.countplot(
-    x="type",
-    data=df
-)
+sns.countplot(x="type", data=df)
 
 plt.title("Movies vs TV Shows")
 plt.xlabel("Type")
 plt.ylabel("Count")
 
-plt.savefig("images/movies_vs_tvshows.png")
+plt.tight_layout()
+
+plt.savefig(
+    "images/movies_vs_tvshows.png",
+    bbox_inches="tight"
+)
 
 plt.show()
 
@@ -75,7 +77,13 @@ plt.show()
 # VISUALIZATION 2
 # Top Countries
 # =========================
-top_countries = df["country"].value_counts().head(10)
+top_countries = (
+    df["country"]
+    .str.split(", ")
+    .explode()
+    .value_counts()
+    .head(10)
+)
 
 plt.figure(figsize=(12, 5))
 
@@ -87,7 +95,12 @@ plt.ylabel("Count")
 
 plt.xticks(rotation=45)
 
-plt.savefig("images/top_countries.png")
+plt.tight_layout()
+
+plt.savefig(
+    "images/top_countries.png",
+    bbox_inches="tight"
+)
 
 plt.show()
 
@@ -104,8 +117,15 @@ sns.countplot(
 )
 
 plt.title("Ratings Distribution")
+plt.xlabel("Count")
+plt.ylabel("Rating")
 
-plt.savefig("images/ratings_distribution.png")
+plt.tight_layout()
+
+plt.savefig(
+    "images/ratings_distribution.png",
+    bbox_inches="tight"
+)
 
 plt.show()
 
@@ -126,8 +146,15 @@ sns.countplot(
 plt.xticks(rotation=90)
 
 plt.title("Content Added Over Years")
+plt.xlabel("Year")
+plt.ylabel("Count")
 
-plt.savefig("images/content_added_over_years.png")
+plt.tight_layout()
+
+plt.savefig(
+    "images/content_added_over_years.png",
+    bbox_inches="tight"
+)
 
 plt.show()
 
@@ -135,25 +162,28 @@ plt.show()
 # VISUALIZATION 5
 # Top Genres
 # =========================
-genres = df["listed_in"].str.split(
-    ", ",
-    expand=True
-).stack()
+genres = (
+    df["listed_in"]
+    .str.split(", ")
+    .explode()
+)
 
 plt.figure(figsize=(12, 6))
 
-genres.value_counts().head(10).plot(
-    kind="bar"
-)
+genres.value_counts().head(10).plot(kind="bar")
 
 plt.title("Top 10 Genres")
-
 plt.xlabel("Genre")
 plt.ylabel("Count")
 
 plt.xticks(rotation=45)
 
-plt.savefig("images/top_genres.png")
+plt.tight_layout()
+
+plt.savefig(
+    "images/top_genres.png",
+    bbox_inches="tight"
+)
 
 plt.show()
 

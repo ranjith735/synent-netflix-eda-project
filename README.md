@@ -2,19 +2,19 @@
 
 ## Overview
 
-This project performs Exploratory Data Analysis (EDA) on the Netflix Movies and TV Shows dataset using Python.
-The analysis focuses on understanding content distribution, genre popularity, ratings, countries producing the most content, and yearly content growth trends on Netflix.
+This project performs Exploratory Data Analysis (EDA) on the Netflix Movies and TV Shows dataset using Python.  
+The analysis focuses on understanding content distribution, genre popularity, ratings, top content-producing countries, and yearly growth trends of Netflix content.
 
 ---
 
 ## Technologies Used
 
-* Python
-* Pandas
-* Matplotlib
-* Seaborn
-* VS Code
-* Git & GitHub
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- VS Code
+- Git & GitHub
 
 ---
 
@@ -30,24 +30,25 @@ The analysis focuses on understanding content distribution, genre popularity, ra
 
 ## Features
 
-* Missing value handling
-* Duplicate removal
-* Movies vs TV Shows analysis
-* Country-wise content analysis
-* Ratings distribution analysis
-* Genre analysis
-* Content added over years visualization
-* Graph image saving
+- Missing value handling
+- Duplicate removal
+- Movies vs TV Shows analysis
+- Country-wise content analysis
+- Ratings distribution analysis
+- Genre analysis
+- Content added over years visualization
+- Automatic graph image saving
 
 ---
 
 ## Key Insights
 
-* Netflix contains more Movies than TV Shows.
-* United States has the highest number of Netflix titles.
-* Drama and International genres are highly popular.
-* Netflix content growth increased rapidly after 2015.
-* TV-MA is one of the most common content ratings.
+- Netflix contains significantly more Movies than TV Shows.
+- The United States contributes the highest number of titles on Netflix.
+- Drama, International Movies, and Comedy are among the most popular genres.
+- Netflix experienced rapid content growth after 2015.
+- TV-MA is one of the most frequently occurring content ratings.
+- Content production increased steadily over the years, showing Netflix’s expanding global reach.
 
 ---
 
@@ -77,13 +78,21 @@ The analysis focuses on understanding content distribution, genre popularity, ra
 
 ## Files
 
-* netflix_eda.py
-* netflix_titles.csv
-* README.md
-* requirements.txt
+- netflix_eda.py
+- netflix_titles.csv
+- README.md
+- requirements.txt
+- images/
+
+---
+
+## Conclusion
+
+This project demonstrates how Exploratory Data Analysis can be used to understand trends and patterns in Netflix content.  
+Using Python visualization libraries, meaningful insights were extracted regarding content types, genres, ratings, and yearly growth trends.
 
 ---
 
 ## Author
 
-Ranjith T
+**Ranjith T**
